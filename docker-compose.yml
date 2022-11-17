@@ -75,7 +75,7 @@ services:
     image: nginx
     ports:
       - "8080:8080"
-      - "443:443"
+      # - "443:443"
     expose:
       - "8080"
     volumes:
@@ -93,12 +93,12 @@ services:
     networks:
       internal:
 
-  # Letsencrypt certs
-  certbot:
-    image: certbot/certbot
-    volumes:
-      - ${WEBGIS_DOCKER_SHARED_VOLUME}/var/www/certbot:/var/www/certbot
-      - ${WEBGIS_DOCKER_SHARED_VOLUME}/certs/letsencrypt:/etc/letsencrypt
+  # # Letsencrypt certs
+  # certbot:
+  #   image: certbot/certbot
+  #   volumes:
+  #     - ${WEBGIS_DOCKER_SHARED_VOLUME}/var/www/certbot:/var/www/certbot
+  #     - ${WEBGIS_DOCKER_SHARED_VOLUME}/certs/letsencrypt:/etc/letsencrypt
 
 volumes:
   shared-volume:
