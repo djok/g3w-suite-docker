@@ -76,8 +76,8 @@ services:
     ports:
       - "8080:8080"
       # - "443:443"
-    # expose:
-    #   - "8080"
+    expose:
+      - "8080"
     volumes:
       - ${WEBGIS_DOCKER_SHARED_VOLUME}:/shared-volume
       - ${WEBGIS_DOCKER_SHARED_VOLUME}/var/www/.well-known:/var/www/.well-known
